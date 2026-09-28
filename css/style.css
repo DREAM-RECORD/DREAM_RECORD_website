@@ -2290,3 +2290,37 @@ body.ey-style {
     }
 
 }
+@media screen and (max-width: 768px) {
+
+    .header-inner {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0 12px !important;
+    }
+
+    .logo {
+        width: auto !important;
+        max-width: calc(100% - 60px) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 13px !important;
+        line-height: 60px !important;
+
+        letter-spacing: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .logo a {
+        font-size: 13px !important;
+        white-space: nowrap !important;
+    }
+
+    .menu-toggle {
+        flex-shrink: 0 !important;
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+}
