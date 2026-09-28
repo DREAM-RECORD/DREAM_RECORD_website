@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ARTIST | DREAM RECORD OFFICIAL SITE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="DREAM RECORD 所属アーティスト・クリエイターのご紹介">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- FontAwesome (アイコン用) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="home ey-style">
+
+<div id="container">
+
+<header class="ey-header">
+  <div class="header-inner">
+    <h1 class="logo"><a href="index.html">DREAM RECORD Web site</a></h1>
+
+<div id="menubar">
+
+  <!-- スマホ用ハンバーガーボタン -->
+  <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- メニュー -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="Support.html">Support</a></li>
+      <li><a href="Artist.html">Artist</a></li>
+    </ul>
+  </nav>
+
+</div>
+  </div>
+</header>
+<!-- ヒーローエリア -->
+<div class="ey-hero subpage-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <p class="sub-catch">DREAM RECORD ARTISTS</p>
+    <h2>ARTIST</h2>
+  </div>
+</div>
+
+<main>
+<div id="contents">
+
+<section id="artist" class="ey-section bg-dark">
+  <div class="center-text">
+    <h1>A R T I S T</h1>
+  </div>
+
+  <!-- アーティストグリッド（2列レイアウト） -->
+  <div class="artist-grid">
+
+    <a href="DiRECtacte.html" class="artist-card-item">
+      <span class="artist-name">DiRECtacte</span>
+      <i class="fas fa-chevron-right arrow"></i>
+    </a>
+
+    <a href="EDEN.html" class="artist-card-item">
+      <span class="artist-name">EDEN</span>
+      <i class="fas fa-chevron-right arrow"></i>
+    </a>
+
+
+
+    <!-- アーティストを追加する場合は以下をコピーして使えます -->
+    <!--
+    <a href="#" class="artist-card-item">
+      <span class="artist-name">アーティスト名</span>
+      <i class="fas fa-chevron-right arrow"></i>
+    </a>
+    -->
+
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="ey-footer">
+
+  <div class="footer-inner">
+    <p class="footer-logo">DREAM RECORD</p>
+    <ul class="sns">
+      <li><a href="https://x.com/DREAM_RECORD_0_"><i class="fa-brands fa-x-twitter"></i></a></li>
+      <li><a href="https://www.instagram.com/dream_record_0_/?hl=ja"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://www.youtube.com/@DREAM_RECORD_Official"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+    <small>Copyright&copy; DREAM RECORD All Rights Reserved.</small>
+  </div>
+</footer>
+
+
+</div>
+
+<!-- ページ上部へ戻る -->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-up"></i></a></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
+  const menuLinks = document.querySelectorAll(".main-nav a");
+
+  if (!menuToggle || !mainNav) return;
+
+  /* メニュー開閉 */
+  menuToggle.addEventListener("click", function () {
+
+    const isOpen = menuToggle.classList.toggle("active");
+
+    mainNav.classList.toggle("active");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
+
+    document.body.classList.toggle("menu-open", isOpen);
+
+  });
+
+
+  /* メニューをクリックしたら閉じる */
+  menuLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+      menuToggle.classList.remove("active");
+      mainNav.classList.remove("active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      document.body.classList.remove("menu-open");
+
+    });
+
+  });
+
+});
+</script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
