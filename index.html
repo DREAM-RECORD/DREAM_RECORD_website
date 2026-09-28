@@ -16,35 +16,30 @@
 <div id="container">
 
 <header class="ey-header">
-
   <div class="header-inner">
+    <h1 class="logo"><a href="index.html">DREAM RECORD Web site</a></h1>
 
-    <h1 class="logo">
-      <a href="index.html">
-        <span class="logo-pc">DREAM RECORD Web site</span>
-        <span class="logo-sp">DREAM RECORD</span>
-      </a>
-    </h1>
+<div id="menubar">
 
-    <button class="menu-toggle" type="button" aria-label="メニュー">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  <!-- スマホ用ハンバーガーボタン -->
+  <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-    <div id="menubar">
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="Support.html">Support</a></li>
-          <li><a href="Artist.html">Artist</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- メニュー -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="Support.html">Support</a></li>
+      <li><a href="Artist.html">Artist</a></li>
+    </ul>
+  </nav>
 
+</div>
   </div>
-
 </header>
 
 <div class="ey-hero">
@@ -299,56 +294,6 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <script src="js/main.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
 
-    const button = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".main-nav");
-
-    if (!button || !menu) {
-        return;
-    }
-
-    button.addEventListener("click", function () {
-
-        const isOpen = button.classList.toggle("active");
-
-        menu.classList.toggle("active");
-
-        document.body.classList.toggle("menu-open");
-
-        button.setAttribute(
-            "aria-expanded",
-            isOpen ? "true" : "false"
-        );
-
-    });
-
-
-    const links = menu.querySelectorAll("a");
-
-    links.forEach(function (link) {
-
-        link.addEventListener("click", function () {
-
-            button.classList.remove("active");
-
-            menu.classList.remove("active");
-
-            document.body.classList.remove("menu-open");
-
-            button.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        });
-
-    });
-
-});
-</script>
-
-<script src="js/main.js"></script>
 </body>
 </html>
